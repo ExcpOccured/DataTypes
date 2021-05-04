@@ -3,4 +3,14 @@ project(DataTypes C)
 
 set(CMAKE_C_STANDARD 11)
 
-add_library(DataTypes SHARED src/library.c src/library.h)
+set(CHECK_INSTALL_DIR "tests/check-0.15.2/")
+
+add_library(DataTypes SHARED
+        src/headers/array.h
+        src/sdk/headers/assert.h
+        src/array.c
+        src/sdk/headers/result.h
+        src/sdk/result.c
+        tests/check_array.c)
+
+add_subdirectory(tests/check-0.15.2/)
