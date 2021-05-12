@@ -10,8 +10,4 @@ set(TEST_SOURCES
         check_array.c
         )
 
-set(TEST_SOURCES
-        check_array.c
-        )
-
 add_executable(check_array ${TEST_SOURCES})
